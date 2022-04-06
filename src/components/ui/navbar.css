@@ -1,0 +1,49 @@
+*{
+   margin: 0;
+   font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.header{
+    padding:15px 120px 15px 120px ;
+    border-bottom: var(--border);
+    background-color: rgb(48, 48, 48);
+    
+    
+ }
+
+ .container-navbar{
+     width: 100%;
+     display: flex;
+     align-items:center;
+     justify-content: space-between;
+ }
+
+
+ .logo{
+    font-size: 1.5rem;
+    color:rgb(236, 236, 236);
+    text-decoration: none;
+    
+ }
+ 
+ .navbar a{
+    margin:0 1rem;
+    font-size: 20px;
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+ }
+ 
+ .header .navbar a:hover{
+    color: rgb(223, 223, 223);
+ }
+ 
+ .link-btn{
+   margin:0 1rem;
+   font-size: 20px;
+   color: rgb(223, 223, 223);
+   text-decoration: none;
+}
+
+.actives {
+   color: aliceblue !important;
+}
