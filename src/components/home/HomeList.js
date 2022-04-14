@@ -9,12 +9,12 @@ export const HomeList = () => {
   const {shoplist, setshoplist} = useContext (ListContext);
 
 
-  const verdato = (item) =>{
-
-    
-    
 
 
+
+  const toShoppingList = (item) =>{
+
+       
     if (shoplist.find(object => object.id == item.id)){
 
       console.log("Producto encontrado");
@@ -22,17 +22,26 @@ export const HomeList = () => {
       setshoplist( [...shoplist,item])
       console.log("Producto agregado")
     }
-
-    
-    /*
-    else{
-      
-      
-
-    }*/
-
  
   }
+
+
+  
+  const handleDelete = (item) =>{
+
+    if (homelist.filter(object => object.id !== item.id)){
+      const newlist = homelist.filter(object => object.id !== item.id)
+      console.log("Producto encontrado");
+      sethomelist(newlist)
+    }else{
+      
+      console.log("Error")
+    }
+ 
+  }
+
+
+
 
 
   return (
@@ -41,7 +50,13 @@ export const HomeList = () => {
 
       {
         homelist.map ( item => (
-          <p key={item.id} > {item.id} - { item.nombre} - {item.precio} - {item.cantidad} <button onClick={ () => verdato (item)} >Click me</button></p> 
+          <p key={item.id} > {item.id} - { item.nombre} - {item.precio} - {item.cantidad} 
+          <button onClick={ () => toShoppingList (item)} >Agregar</button>
+          <button onClick={ () => toShoppingList (item)} >Modificar</button>
+          <button onClick={ () => handleDelete (item)} >Eliminar</button>
+
+          
+          </p> 
         ))
       }
 
