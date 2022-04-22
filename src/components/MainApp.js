@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { ListContext } from './context/ListContext'
 import { AppRouter } from './routers/AppRouter'
 
+import '../styles/main.css'
+
 
 console.log("Main renderizado");
 
@@ -10,28 +12,13 @@ const initHome = () => {
     return JSON.parse(localStorage.getItem('homelist')) || [];
 }
 
-const initList = () => {
-    return JSON.parse(localStorage.getItem('shoplist')) || [];
-}
-
-
-
 
 export const MainApp = () => {
 
-
-    
-
     const [homelist, sethomelist] = useState(initHome)
     
-    const [shoplist, setshoplist] = useState(initList);
-
-   // const [goToShop, setgoToShop] = useState(false);
-    
-
-
     useEffect( () => {
-        if (!initHome)  {
+        if (initHome.length != 0)  {
             return;
         } else  {
             localStorage.setItem('homelist', JSON.stringify(homelist))
@@ -39,23 +26,11 @@ export const MainApp = () => {
     },[homelist])
 
 
-    useEffect( () => {
-        if (!initList)  {
-            return;
-        } else  {
-            localStorage.setItem('shoplist', JSON.stringify(shoplist))
-        }
-    },[shoplist])
-     
-
-
 
     return (
-        <ListContext.Provider value={
-            { homelist, sethomelist, 
-                shoplist, setshoplist
-            }}>
-            <AppRouter></AppRouter>
-        </ListContext.Provider>
+            <ListContext.Provider  value={{ homelist, sethomelist}}>
+                <AppRouter></AppRouter>
+            </ListContext.Provider>
+
     )
 }

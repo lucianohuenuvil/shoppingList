@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { v4 as uuid } from 'uuid';
 
 export const UseForm = ( initialstate ) => {
 
@@ -15,18 +14,19 @@ export const UseForm = ( initialstate ) => {
     }
 
 
-    const handleReset = () =>  {
-
-        setform({
-            id:uuid(),
-            nombre:'',
-            cantidad:'',
-            precio:''
-        }); 
+    const handleReset = (event) =>  {
+        setform(event); 
     }
 
 
 
-  return [form, handleInput, handleReset];
+
+    const handleEdit = (item) => {
+        setform(item); 
+    }
+
+
+
+  return [form, handleInput, handleReset, handleEdit];
 
 }

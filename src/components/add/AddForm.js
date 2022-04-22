@@ -3,46 +3,48 @@ import { ListContext } from '../context/ListContext';
 import { UseForm } from '../hooks/UseForm';
 import { v4 as uuid } from 'uuid';
 
+
+
+
 export const AddForm = () => {
 
-    const {homelist, sethomelist} = useContext (ListContext);
+
+  
+    const formInit = { //Valores iniciales del formulario
+      id:uuid(),
+      nombre:'',
+      cantidad:'',
+      precio:'',
+      estado:0,
+      recogido:0,
+      cantidad_seleccion:1
+    }
+
+    const {homelist, sethomelist} = useContext (ListContext); //Herencia de la lista hogar y set state de la misma
+
+    const [input, handleInput, handleReset ] = UseForm(formInit) //Custom hook del state de un formulario, para evitar hacer mas codigo del necesario, se envían los inputs requeridos
+
+    const {nombre, cantidad, precio } = input; //Desestructuración de los input del formulario para utilizar sus valores de manera independiente
 
 
 
-    const [input, handleInput, handleReset ] = UseForm({
-        id:uuid(),
-        nombre:'',
-        cantidad:'',
-        precio:''
-      })
+    const submitForm = (e) => { //Submit del formulario
+      e.preventDefault(); //Evita que al hacer submit la pagina recargue
 
-    const { id,nombre,cantidad,precio } = input;
-
-
-    console.log(input)
-
-    const submitForm = (e) => {
-        e.preventDefault();
-
-        if(nombre.length > 2 && cantidad.length > 0 && precio.length > 0  ){
-            sethomelist( [...homelist,input]);
-
-            alert("Producto guardado");
-
-            handleReset(e);
-
+      if(nombre.length > 2 && cantidad.length > 0 && precio.length > 0  ){
+          sethomelist( [...homelist,input]);
+          handleReset(formInit); //Funcion hacer un reset en el form
+          alert("Producto guardado");
         } else {
             alert("Debe ingresar los datos correspondientes")
           }
-
     }
     
-
 
   return (
     <div>
         
-        <p>AddForm</p>
+        <p>AddForm COMPONENT</p>
 
         <div>
            <form onSubmit={submitForm}>

@@ -12,7 +12,7 @@ export const AppRouter = () => {
     <BrowserRouter>
         <Navbar></Navbar>
 
-        <div className='container mt-5'>
+        <div className='container mt-5 main-content'>
 
           <Routes>
               <Route path="/" element={<HomeScreen />} />
