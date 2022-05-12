@@ -42,24 +42,37 @@ export const AddForm = () => {
     
 
   return (
-    <div>
-        
-        <p>AddForm COMPONENT</p>
-
-        <div>
+       
+      <div className='addform-component'>
+        <div className='addform-container'>
            <form onSubmit={submitForm}>
 
                 {/*<input type="text" placeholder='Ingresa el id' name="id" value={id} onChange={handleInput}/>*/}
-                <input type="text" placeholder='Ingresa el nombre del producto' name="nombre" value={nombre} onChange={handleInput}/>
-                <input type="number" placeholder='Ingresa la cantidad de stock' name="cantidad" value={cantidad} onChange={handleInput}/>
-                <input type="number" placeholder='Ingresa el precio' name="precio" value={precio} onChange={handleInput}/>
-                <input type="submit" value="Guardar"/>
+                <div className='addform-entry'>
+                    <input type="text" placeholder='Ingresa el nombre del producto' name="nombre" value={nombre} onChange={handleInput}/>
+                </div>
+                <div className='addform-entry'>
+                    <input type="number" placeholder='Ingresa la cantidad de stock' name="cantidad" value={cantidad} onChange={handleInput}/>
+                </div>
+                <div className='addform-entry'>
+                    <input type="number" placeholder='Ingresa el precio' name="precio" value={precio} onChange={handleInput}/>
+                </div>
+                <div className='addform-entry '>
+                    <button type="submit" className='color-blue'> Guardar</button> 
+                </div>
+
+
+                
+
+
              </form>
       
         </div>
 
+      </div>
+        
 
-    </div>
+
 
   )
 }

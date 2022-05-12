@@ -1,0 +1,74 @@
+
+.addform-screen{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+
+    
+}
+
+
+.addform-screen h1{
+    
+    border-bottom: 3px solid rgb(54, 183, 183);
+    padding-bottom: 10px;
+
+}
+
+
+
+.addform-component{
+    display: flex;
+    justify-content: center;
+  
+}
+
+
+
+
+.addform-container{
+    margin: 20px;
+    padding: 5px 10px 20px 10px;
+    border: solid rgb(211, 211, 211) 1px;
+    background-color: #d8d7d7;
+    width: 500px;
+    min-width: 100px;
+   
+
+    
+}
+
+.addform-entry {
+    padding: 10px;
+    
+}
+
+
+.addform-entry input{
+    width: 100%;
+    border: none;
+    margin: 5px 0 0 0;
+    border-radius: 5px;
+}
+
+
+
+
+.addform-entry label {
+    color: rgb(35, 35, 35);
+}
+
+.addform-entry button{
+    width: 100%;
+    height: 40px;
+
+    border-radius: 0px 10px 0 10px;
+    border: none;
+    color: white;
+}
+
+.addform-entry button:hover{
+    opacity: .8;
+    cursor: pointer;
+}

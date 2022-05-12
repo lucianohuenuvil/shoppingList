@@ -1,24 +1,46 @@
 *{
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: Arial, Helvetica, sans-serif
  }
 
 
-.main-content {
+html, body{
+    background-color: #eeeeee;
+}
+
+
+
+.container-components{
+    margin: 80px 5% 25% 5%;
     display: flex;
-    justify-content: center;
-}
-
-
-.content{
-
+    flex-direction: column;
 }
 
 
 
-button {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button button {
     margin: 1em 2em;
-    padding: 1em 2em;
+    padding: 10px;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -33,14 +55,14 @@ button {
     outline: none;
 }
    
-button:hover {
-    background-color: #2EE59D;
+.button button:hover {
+    background-color: #28bf83;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-7px);
 }
    
-button:active {
+.button button:active {
     transform: translateY(-1px);
 }
 
@@ -53,5 +75,16 @@ input.text{
     font-size: 15px;
 }
 
+.color-red{
+    background-color: rgb(209, 35, 35) ;
+}
+
+.color-red :hover{
+    background-color: rgb(154, 19, 19);
+}
+
+.color-blue{
+    background-color: rgb(54, 183, 183);
+}
 
 

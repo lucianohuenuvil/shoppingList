@@ -2,5 +2,45 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100px;
+    padding: 10px 0 15px 0;
+  
+}
+
+
+.filterscreen-form{
+    display: flex;
+    
+}
+
+
+
+.filterscreen-text{
+    width: 80%;
+    margin: 0;
+    border: none;
+    border-radius: 0px 0px 0px 15px;
+    height: 50px;
+    
+}
+
+
+
+.filterscreen-button{
+    width: 20%;
+    margin: 0;
+    border: none;    
+}
+
+
+.filterscreen-button:hover{
+    cursor: pointer;
+    opacity: .8;
+    
+}
+
+.filterscreen-form button{
+
+    border-radius: 0px;
+    color: white;
+    border-radius: 0px 15px 0px 0px;
 }

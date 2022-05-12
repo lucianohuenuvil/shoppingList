@@ -2,11 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { ListContext } from './context/ListContext'
 import { AppRouter } from './routers/AppRouter'
 
-import '../styles/main.css'
-
-
-console.log("Main renderizado");
-
 
 const initHome = () => {
     return JSON.parse(localStorage.getItem('homelist')) || [];

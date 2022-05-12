@@ -1,16 +1,23 @@
 import React from 'react'
+import { useState } from 'react'
 import { FilterScreen } from '../filter/FilterScreen'
 import { HomeList } from './HomeList'
 
 import './homelist.css'
 
-export const HomeScreen = () => {
+export const HomeScreen = (  ) => {
+
+
+  const [inputSearch, setinputSearch] = useState('')
   
+
+
+  console.log(inputSearch)
+
   return (
-    <div className='content'>
-      <h1> Lista de productos en el hogar </h1> 
-      <FilterScreen></FilterScreen>
-      <HomeList></HomeList>
+    <div className='homecreen-component'>
+      <FilterScreen setinputSearch={setinputSearch} ></FilterScreen>
+      <HomeList inputSearch={inputSearch} ></HomeList>
     </div>
 
 

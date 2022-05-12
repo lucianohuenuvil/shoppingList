@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { ListContext } from '../context/ListContext';
 import { UseForm } from '../hooks/UseForm';
 
-export const EditHomeList = ({prop, edit}) => {
+export const EditHomeList = ({prop, seteditable}) => {
 
 
     const [input, handleInput,handleReset, handleEdit ] = UseForm({ //Custom hook del state de un formulario, para evitar hacer mas codigo del necesario, se envían los inputs requeridos
@@ -26,12 +26,16 @@ export const EditHomeList = ({prop, edit}) => {
 
     useEffect(() => {         
         handleEditHomeList(prop);
-    }, [edit])
+    }, [prop])
 
 
 
     const handleEditHomeList = (item) => {
         handleEdit(item);
+    }
+
+    const handleSetButton = () => {
+        seteditable(false);
     }
   
       
@@ -60,17 +64,39 @@ export const EditHomeList = ({prop, edit}) => {
 
 
     return (
-        <div>
+        <div className='edithomelist-container'>
             
-            <h1>EditHomeList</h1> 
-
             <form onSubmit={submitFormat}>
+                <div className="edithomelist-form">
+                    <label>Id:</label>
+                    <input type="text" placeholder='Ingresa el id' name="id" value={id} onChange={handleInput}/>
+                </div>
+                <div className="edithomelist-form">
 
-                <input type="text" placeholder='Ingresa el id' name="id" value={id} onChange={handleInput}/>
-                <input type="text" placeholder='Nombre' name="nombre" value={nombre} onChange={handleInput} />
-                <input type="number" placeholder='Stock' name="cantidad" value={cantidad} onChange={handleInput}/>
-                <input type="number" placeholder='Precio' name="precio" value={precio} onChange={handleInput}/>
-                <input type="submit" value="Guardar"/>
+                    <label>Nombre:</label>
+                    <input type="text" placeholder='Nombre' name="nombre" value={nombre} onChange={handleInput} />
+                </div>
+                <div className="edithomelist-form">
+
+                    <label>Cantidad:</label>
+                    <input type="number" placeholder='Stock' name="cantidad" value={cantidad} onChange={handleInput}/>
+                </div>
+                <div className="edithomelist-form">
+
+                </div>
+                <div className="edithomelist-form">
+                    <label>Precio:</label>
+                    <input type="number" placeholder='Precio' name="precio" value={precio} onChange={handleInput}/>
+                </div>
+
+                <div className="edithomelist-form">
+                    <button className='color-blue' type='submit'>Guardar</button>
+                </div>
+                <div className="edithomelist-form ">
+                    <button className='color-red' onClick={handleSetButton} type='button'>Cerrar</button>
+                </div>
+                
+               
             </form>
 
         </div>
