@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { ListContext } from '../context/ListContext';
-import { EditShopList } from './EditShopList';
+
 
 
 export const ShopList = () => {
@@ -23,7 +23,7 @@ export const ShopList = () => {
 
     const updatelist = homelist.map( data => {
       if ( data.id === item.id){
-        if(data.estado == 1){
+        if(data.estado === 1){
             data.estado = 0;
             data.recogido = 0;
             data.cantidad_seleccion = 1;
@@ -75,7 +75,7 @@ export const ShopList = () => {
   const handlePickUp= (item) => {//////////////////---------------------
     const updatelist = homelist.map( data => {
       if ( data.id === item.id){
-        if(data.recogido == 1){
+        if(data.recogido === 1){
             data.recogido = 0;
         } else {
             data.recogido = 1;

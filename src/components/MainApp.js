@@ -13,7 +13,7 @@ export const MainApp = () => {
     const [homelist, sethomelist] = useState(initHome)
     
     useEffect( () => {
-        if (initHome.length != 0)  {
+        if (initHome.length !== 0)  {
             return;
         } else  {
             localStorage.setItem('homelist', JSON.stringify(homelist))

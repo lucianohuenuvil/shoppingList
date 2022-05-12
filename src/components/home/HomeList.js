@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React, { useContext, useState } from 'react'
 import { useEffect } from 'react';
 import { ListContext } from '../context/ListContext'
@@ -45,7 +44,7 @@ export const HomeList = ( {inputSearch}) => {
  
 
   const handleSelect = (item) =>{ 
-    if (item.estado == 1){
+    if (item.estado === 1){
       alert("El producto ya se encuentra en la lista de compras");
     } else {
       const updatelisthome = homelist.map( data => {
@@ -122,7 +121,7 @@ export const HomeList = ( {inputSearch}) => {
           <div key={item.id} onClick={ () =>  handleObjectSelect(item)} className={[objectSelect.id === item.id ? 'homelist-container object-select' : 'homelist-container']} >
             <div className='homelist-content'>
               <div className='homelist-state'>
-                {(item.estado == 0)
+                {(item.estado = 0)
                   ? <p className='redpoint'> </p>
                   : <p className='greenpoint'> </p>
                 }

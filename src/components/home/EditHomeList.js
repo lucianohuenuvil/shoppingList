@@ -43,7 +43,7 @@ export const EditHomeList = ({prop, seteditable}) => {
         e.preventDefault(); //Evita que al hacer submit la pagina recargue
  
         if(nombre.length > 2 && cantidad.length > 0 && precio.length > 0  ){
-            const itemfound =  homelist.find(object => object.id == e.target.id.value)
+            const itemfound =  homelist.find(object => object.id === e.target.id.value)
             if (!itemfound){
                 alert("El producto no fue encontrado");
             }else{
