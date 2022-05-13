@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useContext } from 'react'
+import React from 'react'
 import { ShopList } from './ShopList'
 
 import './shoplist.css'

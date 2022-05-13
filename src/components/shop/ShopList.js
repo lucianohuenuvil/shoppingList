@@ -1,11 +1,8 @@
-import React, { useContext, useState } from 'react'
-import { ListContext } from '../context/ListContext';
-
-
+import React from 'react'
 
 export const ShopList = () => {
 
-
+/*
   const {homelist, sethomelist, shoplist, setshoplist} = useContext (ListContext);
 
   const [editable, seteditable] = useState(false);
@@ -51,7 +48,7 @@ export const ShopList = () => {
 
 
   const handleSelect= (item) => {//////////////////---------------------
-     /* const updatelist = homelist.map( data => {
+      const updatelist = homelist.map( data => {
         if ( data.id === item.id){
           if(data.recogido == 1){
               data.recogido = 0;
@@ -60,17 +57,16 @@ export const ShopList = () => {
           }  
         }
         return data;
-      })
-      sethomelist(updatelist); */
+      }
+      sethomelist(updatelist); 
   }    
 
 
-/*
+
   const handleSelect = (item) => {
     seteditable(!editable);
     setformsetup(item)
-  }*/
-
+  }
 
   const handlePickUp= (item) => {//////////////////---------------------
     const updatelist = homelist.map( data => {
@@ -85,13 +81,13 @@ export const ShopList = () => {
     })
     sethomelist(updatelist); 
 }   
-
+*/
 
   return (
     <div>
       <h1> ShopList COMPONENT</h1>
 
-      {
+      {/*
         homelist.map( (item, i) => (
           (item.estado === 1)
             && 
@@ -113,9 +109,9 @@ export const ShopList = () => {
       }
 
       { 
-        (homelist.length != 0)
+        (homelist.length !== 0)
         && <button onClick={handleAllDelete}>Eliminar todo</button>
-      }
+      */}
 
 
     </div>

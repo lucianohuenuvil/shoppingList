@@ -35,13 +35,10 @@ export const HomeList = ( {inputSearch}) => {
     setlistObjects (newArray.filter(Boolean));
 
 
-  }, [inputSearch])
+  }, [inputSearch]);
   
 
-  
 
-
- 
 
   const handleSelect = (item) =>{ 
     if (item.estado === 1){
@@ -121,7 +118,7 @@ export const HomeList = ( {inputSearch}) => {
           <div key={item.id} onClick={ () =>  handleObjectSelect(item)} className={[objectSelect.id === item.id ? 'homelist-container object-select' : 'homelist-container']} >
             <div className='homelist-content'>
               <div className='homelist-state'>
-                {(item.estado = 0)
+                {(item.estado === 0)
                   ? <p className='redpoint'> </p>
                   : <p className='greenpoint'> </p>
                 }
