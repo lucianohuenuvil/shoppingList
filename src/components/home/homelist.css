@@ -191,3 +191,15 @@
 }
 
 
+
+
+@media only screen and (max-width: 810px){
+
+
+    
+    .homelist-list{
+        max-height: 350px;
+
+    }
+
+}

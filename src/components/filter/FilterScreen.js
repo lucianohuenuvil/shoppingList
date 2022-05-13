@@ -27,7 +27,7 @@ export const FilterScreen = ( {setinputSearch} ) => {
 
       <form className='filterscreen-form' onSubmit={submitForm}>
        
-        <input className='filterscreen-text' type="text" placeholder='Busca tu producto' name="inputsearch" value={inputsearch} onChange={handleInput}/>
+        <input className='filterscreen-text' type="text" placeholder='Busca tu producto'  autoComplete='off' name="inputsearch" value={inputsearch} onChange={handleInput}/>
         <button className='filterscreen-button color-blue' type='submit'> <i className="fa-solid fa-magnifying-glass"></i></button>
 
       </form>
