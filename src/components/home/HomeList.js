@@ -41,6 +41,7 @@ export const HomeList = ( {inputSearch}) => {
 
 
   const handleSelect = (item) =>{ 
+    console.log(item)
     if (item.estado === 1){
       alert("El producto ya se encuentra en la lista de compras");
     } else {
@@ -94,6 +95,7 @@ export const HomeList = ( {inputSearch}) => {
 
   const handleObjectSelect = (item) => {
     setobjectSelect(item);
+ 
   }
   
 
