@@ -69,24 +69,24 @@ export const EditHomeList = ({prop, seteditable}) => {
             <form onSubmit={submitFormat}>
                 <div className="edithomelist-form">
                     <label>Id:</label>
-                    <input type="text" placeholder='Ingresa el id' name="id" value={id} onChange={handleInput}/>
+                    <input type="text" placeholder='Ingresa el id' name="id" autoComplete='off' value={id} onChange={handleInput}/>
                 </div>
                 <div className="edithomelist-form">
 
                     <label>Nombre:</label>
-                    <input type="text" placeholder='Nombre' name="nombre" value={nombre} onChange={handleInput} />
+                    <input type="text" placeholder='Nombre' name="nombre" autoComplete='off' value={nombre} onChange={handleInput} />
                 </div>
                 <div className="edithomelist-form">
 
                     <label>Cantidad:</label>
-                    <input type="number" placeholder='Stock' name="cantidad" value={cantidad} onChange={handleInput}/>
+                    <input type="number" placeholder='Stock' name="cantidad" autoComplete='off' value={cantidad} onChange={handleInput}/>
                 </div>
                 <div className="edithomelist-form">
 
                 </div>
                 <div className="edithomelist-form">
                     <label>Precio:</label>
-                    <input type="number" placeholder='Precio' name="precio" value={precio} onChange={handleInput}/>
+                    <input type="number" placeholder='Precio' name="precio" autoComplete='off' value={precio} onChange={handleInput}/>
                 </div>
 
                 <div className="edithomelist-form">
