@@ -1,17 +1,41 @@
 .redpoint{
     height:10px;
-   width:10px;
-   background:#ff4242;
-   -moz-border-radius:5px;
-   -webkit-border-radius:5px;
-   border-radius:5px;
+    width:10px;
+    background:#ff4242;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
 }
 
 .greenpoint{
     height:10px;
-   width:10px;
-   background:#82c53e;
-   -moz-border-radius:5px;
-   -webkit-border-radius:5px;
-   border-radius:5px;
+    width:10px;
+    background:#82c53e;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+
+.shop-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.height-box {
+    max-height: 130px !important;
+}
+
+.align-text{
+    display: flex;
+    align-items: center;
+}
+
+.align-text p{
+    margin: 1em 2em;
+    padding: 5px;
+}
+
+.list{
+    max-width: 1500px !important ;
 }

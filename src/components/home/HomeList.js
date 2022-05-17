@@ -114,18 +114,18 @@ export const HomeList = ( {inputSearch}) => {
       
 
 
-      <div className='homelist-list'>
+      <div className='list'>
         { listObjects.map ( item => (   
 
           <div key={item.id} onClick={ () =>  handleObjectSelect(item)} className={[objectSelect.id === item.id ? 'homelist-container object-select' : 'homelist-container']} >
-            <div className='homelist-content'>
+            <div className='list-content'>
               <div className='homelist-state'>
                 {(item.estado === 0)
                   ? <p className='redpoint'> </p>
                   : <p className='greenpoint'> </p>
                 }
               </div>     
-              <div className='homelist-detail'>
+              <div className='list-detail'>
                 <p>Producto: { item.nombre}</p>
                 <p>Precio: { item.precio}</p>
                 <p>Cantidad: { item.cantidad}</p>

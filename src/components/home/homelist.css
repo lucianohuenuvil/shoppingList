@@ -1,7 +1,7 @@
 .homecreen-component{
     display: flex;
     flex-direction: column;
-    height: 80vh;
+
 }
 
 
@@ -11,7 +11,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     
-
 }
 
 .homelist-list{
